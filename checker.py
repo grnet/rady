@@ -9,7 +9,7 @@ import numpy
 import memcache
 import detection
 from settings import *
-memc = memcache.Client(['127.0.0.1:11211'])
+memc = memcache.Client(['%s:%s'%(MEMCACHE_SERVER_ADDR, MEMCACHE_SERVER_PORT)])
 
 import telnetlib
 from socket import error as SocketError

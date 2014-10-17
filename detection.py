@@ -43,4 +43,4 @@ def stdev_detect(ds, threshold):
         dsAnomaly = True
     if dsBigDiff and dsMin < dsLower:
         dsAnomaly = True
-    return dsAnomaly 
+    return dsAnomaly
