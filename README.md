@@ -40,9 +40,10 @@ Remember the wise quote by Miyagi (Karate Kid)::
 
     Better learn balance. Balance is key. Balance good, karate good. Everything good. Balance bad, better pack up, go home. Understand?
    
-Set your contacts that need to be notified in case of anomaly. They can be set globally or per interface::
+Enough with wisdom, let's continue with the rest of parameters::
 
-    MAIL_TO = ['example1@org.com', 'example2@org.com', 'example3@org.com']
+    MAIL_TO: List of contacts that are to be notifies in case of an anomaly being detected
+     
 
 
 
