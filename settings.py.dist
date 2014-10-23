@@ -1,7 +1,8 @@
 from utils import _slugify as slug
 
+VERSION = 0.2
 MEMCACHE_TIMEOUT = 150
-THRESHOLD = 0.20
+THRESHOLD = 0.18
 SNMP_VERSION = 2
 SNMP_COMMUNITY = 'comm'
 MAIL_TO = ['example1@org.com', 'example2@org.com', 'example3@org.com']
@@ -41,15 +42,19 @@ GRAPH_CDEF_MULTIPLIERS = {"traffic":[8, 8],
                           "packets":[1, 1]}
 GRAPH_TITLES = {"traffic":['In Traffic', 'Out Traffic'], 
                 "packets":['In Packets', 'Out Packets'],}
+GRAPH_VERTICAL_LEGEND = {"traffic":"bits per second", 
+                         "packets":"packets per second",}
 GRAPH_OPTIONS = {"traffic":['AREA', 'LINE1'],
                  "packets":['AREA', 'LINE1'],}
-GRAPH_COLORS = {"traffic":['#00FF00', '#0000FF'],
-                "packets":['#00FF00', '#0000FF']}
+GRAPH_COLORS = {"traffic":['#00B2EE', '#ff0000'],
+                "packets":['#00B2EE', '#ff0000']}
+
+GRAPH_EMBED_AND_SHIFT = True
 
 NFDUMP_ENABLE = False
-NFQUERY_HOST = 'nfexample.example.com'
-NFQUERY_PORT = 1234
-NFQUERY_TIMEOUT = 10
+NFDUMP_HOST = 'nfexample.example.com'
+NFDUMP_PORT = 1234
+NFDUMP_TIMEOUT = 10
 
 MEMCACHE_SERVER_ADDR = '127.0.0.1'
 MEMCACHE_SERVER_PORT = 11211
