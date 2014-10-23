@@ -7,6 +7,8 @@ Currently it is tested on a 20Gbps backbone link with 6Gbps avg. traffic and it 
 Detection relies solely on rrd files analysis and a Standard Deviation - based algorithm powers the whole proccess. As a next step the 
 EWMA algorithm will be supported as well.
 
+Documentation is not complete yet, however you can try the tool...
+
 ##Dependencies##
 
 * python-rrdtool
