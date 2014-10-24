@@ -120,9 +120,9 @@ def check_and_mail(ifce, timestamp):
     ds0An, ds1An = attack_check(rrdpath, ifce)
     if ds0An or ds1An:
         draw_graph(ifce, timestamp)
-        cached_anomaly = memc.get(str('%s_error')%(graph_slug))
+        cached_anomaly = memc.get(str('%s:%s_error')%(MEMCACHE_PREFIX, graph_slug))
         if cached_anomaly is None:
-            memc.set(str('%s_error')%(graph_slug), '1', MEMCACHE_TIMEOUT)
+            memc.set(str('%s:%s_error')%(MEMCACHE_PREFIX,graph_slug), '1', MEMCACHE_TIMEOUT)
             notify(imgpath, ifce)
     return
 
