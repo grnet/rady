@@ -31,7 +31,7 @@ def graph_ifce(ifce):
     rrdtool.update(
             str(rrdpath), 
             str('--template'), str('ds0:ds1'),
-            str("%s"%int(time.time())+":" +values[0]+":"+values[1]))
+            str("%s"%int(time.time())+":" +(values[0] or '')+":"+(values[1] or '')))
 
 def graphall():
     for ifce in MONITORED_IFCES:
